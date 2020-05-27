@@ -1,0 +1,307 @@
+/********* GENERALES **********/
+*{
+  box-sizing: border-box;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a, a:hover{
+  text-decoration: none;
+  color: unset;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+h1{
+  font-size: 4rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2{
+  font-size: 3.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h3{
+  font-size: 3rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h4{
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/********* HEADER **********/
+header{
+  padding: 1.5rem 0;
+}
+
+/* LOGO */
+header img {
+  width: 100%;
+  display: block;
+}
+
+header a{
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #684f40;
+  transition: all 0.25s ease-in-out;
+  border-right: 1px solid #66666649;
+  margin-left: 0;
+}
+header a:last-child, :nth-child(3), :nth-child(4){
+  border-right: none;
+}
+header a:hover{
+  color: rgb(255, 196, 0);
+}
+header a, header img{
+  flex: 1;
+  text-align: center;
+}
+/********* MAIN SLIDER **********/
+#carousel-example-2 img{
+  max-height: 80vh;
+}
+
+#carousel-example-2 .view{
+  position: relative;
+}
+
+.contenedor-titulos{
+  position: absolute;
+  top: 40%;
+  left: 15%;
+}
+
+#carousel-example-2 .view h1{
+  background-color: #715f31;
+  opacity: 80%;
+  padding: 3rem 2rem;
+  color: white;
+  margin: 0;
+}
+#carousel-example-2 .view h3{
+  background-color: rgba(255, 196, 0, 0.7);
+  padding: 3rem 2rem;
+  margin: 0;
+}
+
+/********* DESTACADOS **********/
+.destacados h4, .diferencia h4, .location>h4{
+  text-transform: uppercase;
+  color: #684f40;
+  font-weight: 700;
+}
+
+.destacados>p, .diferencia>p, .location>p{
+  font-size: 1.4rem;
+  color: #696969;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.destacados .card{
+  border: 2px solid #696969;
+  position: relative;
+}
+.destacados .card img{
+  transition: all .5s ease-in-out;
+  padding: 8px;
+}
+.destacados .card:hover img{
+  opacity: 50%;
+}
+
+.destacados .card .contenedor-descripcion-destacados{
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 50%;
+  background-color: rgba(255, 196, 0, 0.8);
+  font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  color: white;
+  display: none;
+  transition: all 0.5s ease-in-out;
+}
+.destacados .card:hover .contenedor-descripcion-destacados{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.destacados .card .contenedor-descripcion-destacados p{
+  font-weight: bold;
+}
+.destacados hr, .diferencia hr, .location hr{
+  display: block;
+  width: 20rem;
+  border-top: 2px solid;
+}
+.destacados button, .conoce button{
+  text-transform: uppercase;
+  color: #684f40;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  background-color: transparent;
+  border: 2px solid #684f40;
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  transition: all .5s ease-in-out;
+}
+.destacados button:hover, .conoce button:hover{
+  background-color: #684f40;
+  color: white;
+}
+
+/********* TESTIMONIAL **********/
+.testimoniales{
+  background-image: url('../img/foto-welcome3.jpg');
+  background-position: center center;
+  background-attachment: fixed;
+  overflow: hidden;
+  position: relative;
+}
+.testimoniales::after{
+    content: '';
+    background-color: #d69c1f;
+    opacity: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.testimoniales img{
+  -webkit-transform:rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+  height: 50vh;
+  border: 10px solid white;
+  margin-left: 5rem;
+  z-index: 1;
+}
+.testimoniales blockquote{
+  font-size: 3rem;
+  font-weight: 300;
+  z-index: 1;
+  text-align: right;
+  margin-left: 5rem;
+}
+/********* SECCION LO QUE NOS DIFERENCIA *************/
+.contenedor-cards-diferencia{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+  margin-bottom: 5rem;
+  padding: 0 3rem;
+}
+.contenedor-card-diferencia{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.contenedor-card-diferencia i{
+  border: 2px solid #684f40;
+  padding: 5rem;
+  border-radius: 50%;
+  font-size: 7rem;
+  color: #684f40;
+  transition: all .5s ease-in-out;
+}
+.contenedor-card-diferencia:hover i{
+  color: rgb(255, 196, 0);
+  border-color: rgb(255, 196, 0);
+}
+.contenedor-card-diferencia hr{
+  color: rgb(255, 196, 0);
+  width: 20%;
+}
+.contenedor-card-diferencia span{
+  font-size: 1.4rem;
+  color: #696969;
+}
+
+/********* SECCION CONOCE NUESTROS CLÁSICOS **********/
+.conoce{
+  background-image: url(../img/foto-welcome1.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+}
+.conoce::after{
+  content: '';
+  background-color: white;
+  opacity: 40%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.conoce .contenedor-conoce{
+  z-index: 2;
+  position: relative;
+  padding: 5rem 0;
+}
+.conoce h2, .conoce p{
+  color: #684f40;
+  text-transform: uppercase;
+  z-index: 2;
+  line-height: 2;
+}
+.conoce h2{
+  font-size: 4.5rem;
+}
+.conoce p{
+  font-size: 3rem;
+}
+.contenedor-mapa{
+  position: relative;
+}
+.contenedor-formulario{
+  position: absolute;
+  top: 0;
+  left: 10rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #684f40;
+  height: 100%;
+  color: white;
+  padding: 2rem 6rem;
+}
+.contenedor-formulario span{
+  font-size: 2rem;
+}
+.contenedor-formulario input, .contenedor-formulario textarea{
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+}
+.contenedor-formulario input:hover, .contenedor-formulario textarea:hover{
+  border: 1px solid #d69c1f;
+}
+.contenedor-formulario button{
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  border: none;
+}
+/********* FOOTER **********/
+footer{
+  font-size: 1.5rem;
+  background-color: #28292b;
+}
