@@ -14,8 +14,8 @@ a, a:hover{
   -moz-outline-style: none !important;
 }
 
-a:active, a:active * { outline: none !important; -moz-outline-style: none !important; }
-a:focus, a:focus * { outline: none !important; -moz-outline-style: none !important; }
+a:active, a:active *, button:active *, button:active { outline: none !important; -moz-outline-style: none !important; }
+a:focus, a:focus *, button:focus *, button:focus { outline: none !important; -moz-outline-style: none !important; }
 
 html{
   font-size: 62.5%;
@@ -57,14 +57,14 @@ header img {
 .navbar-toggler-icon{
   font-size: 2rem;
 }
-.nav-item a{
-  color: #684f40!important;
+.navbar-light .navbar-nav .nav-link{
+  color: #684f40;
   border: 1px solid #684f40;
   padding: 1rem 2rem;
   margin: 1rem;
   transition: all .5s ease-in-out;
 }
-.nav-item a:hover{
+.navbar-light .navbar-nav .nav-link:hover{
   background-color: #684f40;
   color: white;
   border: none;
