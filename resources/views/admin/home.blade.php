@@ -1,11 +1,16 @@
-@extends('admin.layouts.app')
+@extends('adminlte::page')
+
+@section('title', 'Rosario Delicias - Dashboard')
+
+@section('content_header')
+    <h1>Dashboard</h1>
+@stop
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Rosario Delicias - Dashboard</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,10 +19,17 @@
                         </div>
                     @endif
 
-                    Admin Dashboard
+                    Welcome, {{Auth::user()->name}}
                 </div>
             </div>
+            <a href="/  ">View like normal user.</a>
         </div>
     </div>
 </div>
-@endsection
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+

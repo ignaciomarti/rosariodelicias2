@@ -30,6 +30,7 @@ Route::get('empresa', function () {
 Route::resource('productos', 'productosController');
 Route::resource('categorias', 'categoriasController');
 Route::resource('carrito', 'carritosController');
+Route::resource('administration', 'pagesAdministrationController');
 
 Auth::routes();
 
