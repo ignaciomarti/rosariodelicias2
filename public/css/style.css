@@ -84,8 +84,10 @@ header a{
   font-weight: 700;
   color: #684f40;
   transition: all 0.25s ease-in-out;
-  border-right: 1px solid #66666649;
   margin-left: 0;
+}
+.separador-derecha{
+  border-right: 1px solid #66666649;
 }
 header nav a:last-child, header nav .dropdown a, header nav a:nth-child(4){
   border-right: none;
@@ -514,5 +516,9 @@ header a, header img{
 }
 
 .carrito-container .contenedor-totales{
+  font-size: 1.3rem;
+}
+
+.contenedor-faq .contenedor-pregunta p{
   font-size: 1.3rem;
 }

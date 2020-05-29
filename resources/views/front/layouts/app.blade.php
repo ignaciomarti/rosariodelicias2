@@ -26,8 +26,8 @@
 <body>
       <header class="bg-white">
         <nav class="d-none d-md-flex align-items-center container">
-          <a href="empresa" class="px-3 py-3">Empresa</a>
-          <a href="productos" class="px-3 py-3">Productos</a>
+          <a href="empresa" class="separador-derecha px-3 py-3">Empresa</a>
+          <a href="productos" class="separador-derecha px-3 py-3">Productos</a>
 
           <div class="dropdown px-3 py-3">
             <a href="categorias" class="dropbtn px-3 py-3">Categorías</a>
@@ -38,11 +38,22 @@
             </div>
           </div> 
 
-          
           <a href="/"><img src="img/logo.jpg" class="logo" alt="logo de Rosario Delicias"></a>
-          <a href="redes" class="px-3 py-3">Redes</a>
-          <a href="contacto" class="px-3 py-3">Contacto</a>
-          <a href="carrito" class="px-3 py-3">Carrito</a>
+
+          <div class="separador-derecha dropdown px-3 py-3">
+            <a class="px-3 py-3 dropbtn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Redes
+            </a>
+          
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item main-color" target="__blank" href="http://www.facebook.com/rosariodelicias">Facebook</a>
+              <a class="dropdown-item main-color" target="__blank" href="http://www.instagram.com/rosariodelimx">Instagram</a>
+              <a class="dropdown-item main-color" target="__blank" href="https://wa.me/525513545818">Whatsapp</a>
+            </div>
+          </div>
+
+          <a href="contacto" class="separador-derecha px-3 py-3">Contacto</a>
+          <a href="carrito" class="separador-derecha px-3 py-3">Carrito</a>
         </nav>
 
           <nav id="navMobile" class="navbar d-md-none navbar-light shadow-sm">
@@ -66,7 +77,19 @@
                         <li class="nav-item"><a href="empresa" class="nav-link">Empresa</a></li>
                         <li class="nav-item"><a href="productos" class="nav-link">Productos</a></li>
                         <li class="nav-item"><a href="categorias" class="nav-link">Categorías</a></li>
-                        <li class="nav-item"><a href="redes" class="nav-link">Redes</a></li>
+
+                        <div class="dropdown">
+                          <a class="nav-link" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Redes
+                          </a>
+                        
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item main-color" target="__blank" href="http://www.facebook.com/rosariodelicias">Facebook</a>
+                            <a class="dropdown-item main-color" target="__blank" href="http://www.instagram.com/rosariodelimx">Instagram</a>
+                            <a class="dropdown-item main-color" target="__blank" href="https://wa.me/525513545818">Whatsapp</a>
+                          </div>
+                        </div>
+
                         <li class="nav-item"><a href="contacto" class="nav-link">Contacto</a></li>
                         <li class="nav-item"><a href="carrito" class="nav-link">Carrito</a></li>
                     </ul>

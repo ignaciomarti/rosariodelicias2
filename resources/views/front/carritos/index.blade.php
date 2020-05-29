@@ -54,6 +54,35 @@
         <button type="button" class="main-btn btn ">Comprar Todo</button>
     </div>
   </div>
+  <div class="container contenedor-faq">
+        <h2 class="main-color text-center my-4">Preguntas frecuentes</h2>
+
+        <div class="contenedor-pregunta">
+            <h4 class="main-color">¿Puedo freezar productos?</h4>
+            <p>¡Si! Todos nuestros productos pueden freezarse tranquilamente, y descongelarse a temperatura ambiente o como más te gusten ¡aprovechá y hacé un pedido para toda la semana!</p> 
+        </div>
+
+        <div class="contenedor-pregunta">
+            <h4 class="main-color">¿Puedo pedir desde otro barrio?</h4>
+            <p> Lamentablemente no, porque no podemos hacer envíos fuera del radio indicado. Pero aún podés acercarte a nuestros locales ¡consultá horarios actualizados en Instagram!</p>
+        </div>
+
+        <div class="contenedor-pregunta">
+            <h4 class="main-color">¿En qué horario me lo entregan?</h4>
+            <p> Los pedidos se entregan entre las 10:00 y 15:00 aproximadamente. El orden de entrega depende de los pedidos del día, y no es posible especificar una hora exacta. Considerá que debido a las circunstancias y controles en las calles, a veces pueden haber pequeñas demoras.</p>
+        </div>
+
+        <div class="contenedor-pregunta">
+            <h4 class="main-color">¿Y si no veo el producto que me gusta en la lista?</h4>
+            <p> Los productos disponibles son sólo los publicados. Como todo lo que enviamos es fresco y del día, seguimos un calendario de producción ¡Chequeá los últimos productos y especiales de la semana en Instagram!</p>
+        </div>
+
+        <div class="contenedor-pregunta">
+            <h4 class="main-color">¿Cuánto sale el envío?</h4>
+            <p> El costo del envío depende de dónde quieras recibir el producto. Luego de realizar tu pedido, te contactaremos informándote el importe final que vas a pagar!</p>
+        </div>
+    </div>
+
 </main>
 
 
