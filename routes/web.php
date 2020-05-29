@@ -16,6 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('front.index');
 });
+Route::get('contacto', function () {
+    return view('front.contacto');
+});
+Route::get('redes', function () {
+    return view('front.redes');
+});
+Route::get('empresa', function () {
+    return view('front.empresa');
+});
 
 Auth::routes();
 
