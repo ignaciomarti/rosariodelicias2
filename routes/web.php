@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\productosController;
+use App\pageAdministration;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('front.index');
+    $collection = pageAdministration::all();
+    $datos = $collection[0];
+    return view('front.index', compact('datos'));
 });
 Route::get('contacto', function () {
     return view('front.contacto');

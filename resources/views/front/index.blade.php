@@ -18,8 +18,8 @@
           <img class="d-block w-100" src="img/foto-welcome1.jpg"
             alt="First slide">
             <div class="contenedor-titulos">
-              <h1 class="welcomeTitle">Bienvenidos a Rosario Delicias</h1>
-              <h3 class="welcome-title">Lorem ipsum dolor sit.</h3>
+            <h1 class="welcomeTitle">{{$datos->main_title_1 ? $datos->main_title_1 : ""}}</h1>
+              <h3 class="welcome-title">{{$datos->main_subtitle_1 ? $datos->main_subtitle_1 : ""}}</h3>
             </div>
           <div class="mask rgba-black-light"></div>
         </div>
@@ -30,8 +30,8 @@
           <img class="d-block w-100" src="img/foto-welcome2.jpg"
             alt="Second slide">
             <div class="contenedor-titulos">
-              <h1>Los mejores alfajores del mundo</h1>
-              <h3>Amet consectetur adipisicing elit..</h3>
+              <h1>{{$datos->main_title_2 ? $datos->main_title_2 : ""}}</h1>
+              <h3>{{$datos->main_subtitle_2 ? $datos->main_subtitle_2 : ""}}</h3>
             </div>
           <div class="mask rgba-black-strong"></div>
         </div>
@@ -42,8 +42,8 @@
           <img class="d-block w-100" src="img/foto-welcome3.jpg"
             alt="Third slide">
             <div class="contenedor-titulos">
-              <h1>Y alrededores de este mundo</h1>
-              <h3>Sit dolorum ad delectus?</h3>
+              <h1>{{$datos->main_title_3 ? $datos->main_title_3 : ""}}</h1>
+              <h3>{{$datos->main_subtitle_3 ? $datos->main_subtitle_3 : ""}}</h3>
             </div>
           <div class="mask rgba-black-slight"></div>
         </div>
@@ -65,9 +65,9 @@
 </section>
 
 <section class="container destacados">
-  <h4 class="text-center mt-5 mb-2">Nuestros destacados</h4>
+  <h4 class="text-center mt-5 mb-2">{{$datos->destacados_title ? $datos->destacados_title : ""}}</h4>
   <hr class="separador">
-  <p class="text-center my-4"> Amamos lo que hacemos</p>
+  <p class="text-center my-4"> {{$datos->destacados_subtitle ? $datos->destacados_subtitle : ""}}</p>
   <div class="row row-cols-1 row-cols-md-3">
     <div class="col mb-5">
       <div class="card">
@@ -129,54 +129,54 @@
 
 <section class="testimoniales d-md-flex justify-content-between align-items-center my-5">
   <img src="img/panadero.jpg" alt="imágen de Florian Martí">
-  <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, velit. adipisicing elit. Id, velit.</blockquote>
+  <blockquote>{{$datos->testimonial ? $datos->testimonial : ""}}</blockquote>
 </section>
 
 <section class="diferencia">
-  <h4 class="text-center mt-5 mb-2">Lo que nos diferencia</h4>
+  <h4 class="text-center mt-5 mb-2">{{$datos->title_diferencia ? $datos->title_diferencia : ""}}</h4>
   <hr class="separador">
-  <p class="text-center my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit?</p>
+  <p class="text-center my-4">{{$datos->subtitle_diferencia ? $datos->subtitle_diferencia : ""}}</p>
 
   <div class="container contenedor-cards-diferencia">
     <div class="contenedor-card-diferencia">
       <i class="fas fa-mug-hot"></i>
-      <h4 class="mt-4">Lorem ipsum</h4>
+      <h4 class="mt-4">{{$datos->title_first_card_diferencia ? $datos->title_first_card_diferencia : ""}}</h4>
       <hr class="separador">
-      <span>Lorem ipsum dolor sit amet consectetur.</span>
+      <span>{{$datos->subtitle_first_card_diferencia ? $datos->subtitle_first_card_diferencia : ""}}</span>
     </div>
     <div class="contenedor-card-diferencia">
       <i class="fas fa-cookie-bite"></i>
-      <h4 class="mt-4">Lorem ipsum</h4>
+      <h4 class="mt-4">{{$datos->title_second_card_diferencia ? $datos->title_second_card_diferencia : ""}}</h4>
       <hr class="separador">
-      <span>Lorem ipsum dolor sit amet consectetur.</span>
+      <span>{{$datos->subtitle_second_card_diferencia ? $datos->subtitle_second_card_diferencia : ""}}</span>
     </div>
     <div class="contenedor-card-diferencia">    
       <i class="far fa-heart"></i>
-      <h4 class="mt-4">Lorem ipsum</h4>
+      <h4 class="mt-4">{{$datos->title_third_card_diferencia ? $datos->title_third_card_diferencia : ""}}</h4>
       <hr class="separador">
-      <span>Lorem ipsum dolor sit amet consectetur.</span>
+      <span>{{$datos->subtitle_third_card_diferencia ? $datos->subtitle_third_card_diferencia : ""}}</span>
     </div>
   </div>
 </section>
 
 <section class="conoce">
   <div class="contenedor-conoce">
-    <h2 class="text-center">Conocé nuestros clásicos</h2>
-    <p class="text-center container">Alfajores, tartas, Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, dolore.</p>
+    <h2 class="text-center">{{$datos->title_section_clasics ? $datos->title_section_clasics : ""}}</h2>
+    <p class="text-center container">{{$datos->subtitle_section_clasics ? $datos->subtitle_section_clasics : ""}}</p>
     <button class="main-btn mx-auto d-block mt-5">Ver todos los productos</button>
   </div>
 </section>
 
 <section class="location">
-  <h4 class="text-center mt-5 mb-2">Dónde estamos</h4>
+  <h4 class="text-center mt-5 mb-2">{{$datos->title_section_location ? $datos->title_section_location : ""}}</h4>
   <hr class="separador">
-  <p class="text-center my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit?</p>
+  <p class="text-center my-4">{{$datos->subtitle_section_location ? $datos->subtitle_section_location : ""}}</p>
   <div class="contenedor-mapa">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d481728.80462972773!2d-99.42381643176068!3d19.390519022922902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee841!2zQ2l1ZGFkIGRlIE3DqXhpY28sIENETVgsIE3DqXhpY28!5e0!3m2!1ses-419!2sar!4v1590498688346!5m2!1ses-419!2sar" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     <form action="/" method="POST">
       <div class="contenedor-formulario mb-auto d-md-flex d-none">
         <h4>CONTACTANOS</h4>
-        <span>Consultas, sugerencias, ideas.</span>
+        <span>{{$datos->formulario_contacto ? $datos->formulario_contacto : ""}}</span>
         <input type="text" placeholder="Nombre" name="nombre">
         <input type="text" placeholder="E-mail" name="email">
         <textarea type="text" placeholder="Mensaje..." name="mensaje"></textarea>

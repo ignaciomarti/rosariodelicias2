@@ -22,66 +22,80 @@
               
                   <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body">
-                      <form action="">
-                          <label for="main-title-1">Titulo principal</label>
-                          <input type="text" name="main-title-1" id="main-title-1">
-                          <label for="main-subtitle-1">Subtitulo principal</label>
-                          <input type="text" name="main-subtitle-1" id="main-subtitle-1">
+                      <form class="contenedor-formulario-administrador d-flex flex-column" action="{{Route('administration.update', $datos->id)}}" method="POST">
+                          @csrf
+                          @method('PUT')
+                          <label for="main_title_1">Titulo principal</label>
+                          <input type="text" name="main_title_1" id="main_title_1" value="{{$datos->main_title_1}}">
+                          <label for="main_subtitle_1">Subtitulo principal</label>
+                          <input type="text" name="main_subtitle_1" id="main_subtitle_1" value="{{$datos->main_subtitle_1}}">
+                          <label for="foto_slider_1">Foto de fondo 1</label>
+                          <input type="file" name="foto_slider_1" id="foto_slider_1">
 
-                          <label for="main-title-2">Titulo secundario</label>
-                          <input type="text" name="main-title-2" id="main-title-2">
-                          <label for="main-subtitle-2">Subtitulo secundario</label>
-                          <input type="text" name="main-subtitle-2" id="main-subtitle-2">
+                          <label for="main_title_2">Titulo secundario</label>
+                          <input type="text" name="main_title_2" id="main_title_2" value="{{$datos->main_title_2}}">
+                          <label for="main_subtitle_2">Subtitulo secundario</label>
+                          <input type="text" name="main_subtitle_2" id="main_subtitle_2" value="{{$datos->main_subtitle_2}}">
+                          <label for="foto_slider_2">Foto de fondo 2</label>
+                          <input type="file" name="foto_slider_2" id="foto_slider_2">
 
-                          <label for="main-title-3">Titulo terciario</label>
-                          <input type="text" name="main-title-3" id="main-title-3">
-                          <label for="main-subtitle-3">Subtitulo terciario</label>
-                          <input type="text" name="main-subtitle-3" id="main-subtitle-3">
+                          <label for="main_title_3">Titulo terciario</label>
+                          <input type="text" name="main_title_3" id="main_title_3" value="{{$datos->main_title_3}}">
+                          <label for="main_subtitle_3">Subtitulo terciario</label>
+                          <input type="text" name="main_subtitle_3" id="main_subtitle_3" value="{{$datos->main_subtitle_3}}">
+                          <label for="foto_slider_3">Foto de fondo 3</label>
+                          <input type="file" name="foto_slider_3" id="foto_slider_3">
                           
 
-                          <label for="destacados-title">Título sección destacados</label>
-                          <input type="text" name="destacados-title" id="destacados-title">
-                          <label for="destacados-subtitle">Subtitulo sección destacados</label>
-                          <input type="text" name="destacados-subtitle" id="destacados-subtitle">
+                          <label for="destacados_title">Título sección destacados</label>
+                          <input type="text" name="destacados_title" id="destacados_title" value="{{$datos->destacados_title}}">
+                          <label for="destacados_subtitle">Subtitulo sección destacados</label>
+                          <input type="text" name="destacados_subtitle" id="destacados_subtitle" value="{{$datos->destacados_subtitle}}">
 
 
                           <label for="testimonial">Testimonial</label>
-                          <input type="text" name="testimonial" id="testimonial">
+                          <input type="text" name="testimonial" id="testimonial" value="{{$datos->testimonial}}">
+                          <label for="foto_testimonial">Foto testimonial</label>
+                          <input type="file" name="foto_testimonial" id="foto_testimonial">
+                          <label for="foto_fondo_testimonial">Foto de fondo</label>
+                          <input type="file" name="foto_fondo_testimonial" id="foto_fondo_testimonial">
 
 
-                          <label for="title-diferencia">Título "Lo que nos diferencia"</label>
-                          <input type="text" name="title-diferencia" id="title-diferencia">
-                          <label for="subtitle-diferencia">Subtítulo "Lo que nos diferencia"</label>
-                          <input type="text" name="subtitle-diferencia" id="subtitle-diferencia">
+                          <label for="title_diferencia">Título "Lo que nos diferencia"</label>
+                          <input type="text" name="title_diferencia" id="title_diferencia" value="{{$datos->title_diferencia}}">
+                          <label for="subtitle_diferencia">Subtítulo "Lo que nos diferencia"</label>
+                          <input type="text" name="subtitle_diferencia" id="subtitle_diferencia" value="{{$datos->subtitle_diferencia}}">
 
-                          <label for="title-first-card-diferencia">Título primer card "Lo que nos diferencia"</label>
-                          <input type="text" name="title-first-card-diferencia" id="title-first-card-diferencia">
-                          <label for="subtitle-first-card-diferencia">Subtítulo primer card "Lo que nos diferencia"</label>
-                          <input type="text" name="subtitle-first-card-diferencia" id="subtitle-first-card-diferencia">
+                          <label for="title_first_card_diferencia">Título primer card "Lo que nos diferencia"</label>
+                          <input type="text" name="title_first_card_diferencia" id="title_first_card_diferencia" value="{{$datos->title_first_card_diferencia}}">
+                          <label for="subtitle_first_card_diferencia">Subtítulo primer card "Lo que nos diferencia"</label>
+                          <input type="text" name="subtitle_first_card_diferencia" id="subtitle_first_card_diferencia" value="{{$datos->subtitle_first_card_diferencia}}">
 
-                          <label for="title-second-card-diferencia">Título segunda card "Lo que nos diferencia"</label>
-                          <input type="text" name="title-second-card-diferencia" id="title-second-card-diferencia">
-                          <label for="subtitle-second-card-diferencia">Subtítulo segunda card "Lo que nos diferencia"</label>
-                          <input type="text" name="subtitle-second-card-diferencia" id="subtitle-second-card-diferencia">
+                          <label for="title_second_card_diferencia">Título segunda card "Lo que nos diferencia"</label>
+                          <input type="text" name="title_second_card_diferencia" id="title_second_card_diferencia" value="{{$datos->title_second_card_diferencia}}">
+                          <label for="subtitle_second_card_diferencia">Subtítulo segunda card "Lo que nos diferencia"</label>
+                          <input type="text" name="subtitle_second_card_diferencia" id="subtitle_second_card_diferencia" value="{{$datos->subtitle_second_card_diferencia}}">
 
-                          <label for="title-third-card-diferencia">Título tercera card "Lo que nos diferencia"</label>
-                          <input type="text" name="title-third-card-diferencia" id="title-third-card-diferencia">
-                          <label for="subtitle-third-card-diferencia">Subtítulo tercera card "Lo que nos diferencia"</label>
-                          <input type="text" name="subtitle-third-card-diferencia" id="subtitle-third-card-diferencia">
+                          <label for="title_third_card_diferencia">Título tercera card "Lo que nos diferencia"</label>
+                          <input type="text" name="title_third_card_diferencia" id="title_third_card_diferencia" value="{{$datos->title_third_card_diferencia}}">
+                          <label for="subtitle_third_card_diferencia">Subtítulo tercera card "Lo que nos diferencia"</label>
+                          <input type="text" name="subtitle_third_card_diferencia" id="subtitle_third_card_diferencia" value="{{$datos->subtitle_third_card_diferencia}}">
 
                           
-                          <label for="title-section-clasics">Título sección clásicos</label>
-                          <input type="text" name="title-section-clasics" id="title-section-clasics">
-                          <label for="subtitle-section-clasics">Subtítulo sección clásicos</label>
-                          <input type="text" name="subtitle-section-clasics" id="subtitle-section-clasics">
+                          <label for="title_section_clasics">Título sección clásicos</label>
+                          <input type="text" name="title_section_clasics" id="title_section_clasics" value="{{$datos->title_section_clasics}}">
+                          <label for="subtitle_section_clasics">Subtítulo sección clásicos</label>
+                          <input type="text" name="subtitle_section_clasics" id="subtitle_section_clasics" value="{{$datos->subtitle_section_clasics}}">
+                          <label for="foto_fondo_clasics">Foto de fondo</label>
+                          <input type="file" name="foto_fondo_clasics" id="foto_fondo_clasics">
 
 
-                          <label for="title-section-location">Título sección dónde estamos</label>
-                          <input type="text" name="title-section-location" id="title-section-location">
-                          <label for="subtitle-section-location">Subtítulo sección dónde estamos</label>
-                          <input type="text" name="subtitle-section-location" id="subtitle-section-location">
-                          <label for="formulario-contacto">Formulario de Contacto</label>
-                          <input type="text" name="formulario-contacto" id="formulario-contacto">
+                          <label for="title_section_location">Título sección dónde estamos</label>
+                          <input type="text" name="title_section_location" id="title_section_location" value="{{$datos->title_section_location}}">
+                          <label for="subtitle_section_location">Subtítulo sección dónde estamos</label>
+                          <input type="text" name="subtitle_section_location" id="subtitle_section_location" value="{{$datos->subtitle_section_location}}">
+                          <label for="formulario_contacto">Formulario de Contacto</label>
+                          <input type="text" name="formulario_contacto" id="formulario_contacto" value="{{$datos->formulario_contacto}}">
 
                           <button type="submit">Actualizar</button>
                       </form>
