@@ -10,7 +10,12 @@ ul{
 a, a:hover{
   text-decoration: none;
   color: unset;
+  outline: none !important; 
+  -moz-outline-style: none !important;
 }
+
+a:active, a:active * { outline: none !important; -moz-outline-style: none !important; }
+a:focus, a:focus * { outline: none !important; -moz-outline-style: none !important; }
 
 html{
   font-size: 62.5%;
@@ -37,8 +42,10 @@ h4{
 }
 
 /********* HEADER **********/
-header{
-  padding: 1.5rem 0;
+@media (min-width: 768px){
+  header{
+    padding: 1.5rem 0;
+  }
 }
 
 /* LOGO */
@@ -47,6 +54,21 @@ header img {
   display: block;
 }
 
+.navbar-toggler-icon{
+  font-size: 2rem;
+}
+.nav-item a{
+  color: #684f40!important;
+  border: 1px solid #684f40;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  transition: all .5s ease-in-out;
+}
+.nav-item a:hover{
+  background-color: #684f40;
+  color: white;
+  border: none;
+}
 header a{
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
@@ -57,7 +79,7 @@ header a{
   border-right: 1px solid #66666649;
   margin-left: 0;
 }
-header a:last-child, :nth-child(3), :nth-child(4){
+header nav a:last-child, header nav a:nth-child(3), header nav a:nth-child(4){
   border-right: none;
 }
 header a:hover{
@@ -78,21 +100,38 @@ header a, header img{
 
 .contenedor-titulos{
   position: absolute;
-  top: 40%;
-  left: 15%;
+  top: 5rem;
+  left: 0;
 }
-
 #carousel-example-2 .view h1{
   background-color: #715f31;
   opacity: 80%;
-  padding: 3rem 2rem;
   color: white;
   margin: 0;
+  text-align: center;
+  font-size: 3rem;
+  padding: 1rem 0;
 }
 #carousel-example-2 .view h3{
   background-color: rgba(255, 196, 0, 0.7);
-  padding: 3rem 2rem;
   margin: 0;
+  text-align: center;
+  font-size: 3rem;
+  padding: 1rem 0;
+}
+@media (min-width: 768px){
+  .contenedor-titulos{
+    top: 40%;
+    left: 15%;
+  }
+
+#carousel-example-2 .view h1{
+  padding: 3rem 2rem;
+
+}
+#carousel-example-2 .view h3{
+  padding: 3rem 2rem;
+}
 }
 
 /********* DESTACADOS **********/
@@ -121,6 +160,7 @@ header a, header img{
 }
 
 .destacados .card .contenedor-descripcion-destacados{
+  opacity: 0%;
   position: absolute;
   bottom: 0;
   margin: 0;
@@ -132,12 +172,13 @@ header a, header img{
   color: white;
   display: none;
   transition: all 0.5s ease-in-out;
-}
-.destacados .card:hover .contenedor-descripcion-destacados{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+.destacados .card:hover .contenedor-descripcion-destacados{
+  opacity: 80%;
 }
 .destacados .card .contenedor-descripcion-destacados p{
   font-weight: bold;
@@ -168,13 +209,14 @@ header a, header img{
   background-image: url('../img/foto-welcome3.jpg');
   background-position: center center;
   background-attachment: fixed;
+  background-size: cover;
   overflow: hidden;
   position: relative;
 }
 .testimoniales::after{
     content: '';
     background-color: #d69c1f;
-    opacity: 80%;
+    opacity: 75%;
     position: absolute;
     top: 0;
     left: 0;
@@ -187,31 +229,56 @@ header a, header img{
   -ms-transform: rotate(-4deg);
   -o-transform: rotate(-4deg);
   transform: rotate(-4deg);
-  height: 50vh;
-  border: 10px solid white;
-  margin-left: 5rem;
+  height: 20rem;
+  border: 3px solid white;
   z-index: 1;
+  margin: 2rem auto 2rem;
+  display: block;
+  position: relative;
 }
 .testimoniales blockquote{
+  text-align: center;
+  z-index: 1;
   font-size: 3rem;
   font-weight: 300;
-  z-index: 1;
-  text-align: right;
+  position: relative;
+  margin: 2rem;
+  color: #684f40;
+}
+@media (min-width: 768px){
+.testimoniales img{
+  height: 50vh;
   margin-left: 5rem;
+  border: 1rem solid white;
+}
+.testimoniales blockquote{
+  text-align: right;
+  margin: 0 5rem;
+}
 }
 /********* SECCION LO QUE NOS DIFERENCIA *************/
 .contenedor-cards-diferencia{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 2rem;
+  display: block;
+  grid-template-columns: 1fr;
   margin-bottom: 5rem;
-  padding: 0 3rem;
 }
 .contenedor-card-diferencia{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  margin: 2rem 0;
+}
+@media (min-width: 768px){
+  .contenedor-cards-diferencia{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    padding: 0 3rem;
+  }
+  .contenedor-card-diferencia{
+    margin-bottom: 0;
+  }
 }
 .contenedor-card-diferencia i{
   border: 2px solid #684f40;
@@ -232,6 +299,7 @@ header a, header img{
 .contenedor-card-diferencia span{
   font-size: 1.4rem;
   color: #696969;
+  text-align: center;
 }
 
 /********* SECCION CONOCE NUESTROS CLÁSICOS **********/
@@ -257,32 +325,47 @@ header a, header img{
   position: relative;
   padding: 5rem 0;
 }
+
 .conoce h2, .conoce p{
   color: #684f40;
   text-transform: uppercase;
   z-index: 2;
-  line-height: 2;
 }
 .conoce h2{
   font-size: 4.5rem;
+  line-height: 2;
 }
 .conoce p{
-  font-size: 3rem;
+  font-size: 2rem;
 }
-.contenedor-mapa{
-  position: relative;
+@media (min-width: 768px){
+  .conoce p{
+    font-size: 3rem;
+    line-height: 2;
+  }
 }
-.contenedor-formulario{
-  position: absolute;
-  top: 0;
-  left: 10rem;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #684f40;
-  height: 100%;
-  color: white;
-  padding: 2rem 6rem;
+
+/********** SECCION DONDE ESTAMOS ************/
+
+@media (min-width:768px){
+  .contenedor-mapa{
+    position: relative;
+  }
+  .cotenedor-mapa form{
+    height: 100%;
+  }
+  .contenedor-formulario{
+    position: absolute;
+    top: 0;
+    left: 10rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #684f40;
+    height: 100%;
+    color: white;
+    padding: 2rem 6rem;
+  }
 }
 .contenedor-formulario span{
   font-size: 2rem;
@@ -291,6 +374,8 @@ header a, header img{
   width: 100%;
   padding: 1.5rem;
   font-size: 1.5rem;
+  color: #684f40;
+  border: 1px solid #684f40;
 }
 .contenedor-formulario input:hover, .contenedor-formulario textarea:hover{
   border: 1px solid #d69c1f;
@@ -299,6 +384,7 @@ header a, header img{
   text-transform: uppercase;
   font-size: 1.5rem;
   border: none;
+  color: #684f40;
 }
 /********* FOOTER **********/
 footer{

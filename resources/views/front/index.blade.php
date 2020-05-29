@@ -96,7 +96,7 @@
         </div>
       </div>
     </div>
-    <div class="col">
+    <div class="col mb-5 mb-sm-0">
       <div class="card">
         <img src="img/foto-welcome3.jpg" class="card-img-top" alt="Cuarto producto destacado">
         <div class="contenedor-descripcion-destacados">
@@ -105,7 +105,7 @@
         </div>
       </div>
     </div>
-    <div class="col">
+    <div class="col mb-5 mb-sm-0">
       <div class="card">
         <img src="img/foto-welcome2.jpg" class="card-img-top" alt="Quinto producto destacado">
         <div class="contenedor-descripcion-destacados">
@@ -127,7 +127,7 @@
   <button class="mx-auto d-block mt-5">Ver todos los productos</button>
 </section>
 
-<section class="testimoniales d-flex justify-content-between align-items-center my-5">
+<section class="testimoniales d-md-flex justify-content-between align-items-center my-5">
   <img src="img/panadero.jpg" alt="imágen de Florian Martí">
   <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, velit. adipisicing elit. Id, velit.</blockquote>
 </section>
@@ -166,19 +166,20 @@
     <button class="mx-auto d-block mt-5">Ver todos los productos</button>
   </div>
 </section>
+
 <section class="location">
   <h4 class="text-center mt-5 mb-2">Dónde estamos</h4>
   <hr>
   <p class="text-center my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit?</p>
   <div class="contenedor-mapa">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d481728.80462972773!2d-99.42381643176068!3d19.390519022922902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee841!2zQ2l1ZGFkIGRlIE3DqXhpY28sIENETVgsIE3DqXhpY28!5e0!3m2!1ses-419!2sar!4v1590498688346!5m2!1ses-419!2sar" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    <form action="">
-      <div class="contenedor-formulario d-flex">
+    <form action="/" method="POST">
+      <div class="contenedor-formulario mb-auto d-md-flex d-none">
         <h4>CONTACTANOS</h4>
         <span>Consultas, sugerencias, ideas.</span>
-        <input type="text" placeholder="Nombre">
-        <input type="text" placeholder="E-mail">
-        <textarea type="text" placeholder="Mensaje..."></textarea>
+        <input type="text" placeholder="Nombre" name="nombre">
+        <input type="text" placeholder="E-mail" name="email">
+        <textarea type="text" placeholder="Mensaje..." name="mensaje"></textarea>
         <button type="submit" class="m-0 py-4 px-5">Enviar</button>
       </div>
     </form>
