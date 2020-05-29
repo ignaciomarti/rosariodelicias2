@@ -87,7 +87,7 @@ header a{
   border-right: 1px solid #66666649;
   margin-left: 0;
 }
-header nav a:last-child, header nav a:nth-child(3), header nav a:nth-child(4){
+header nav a:last-child, header nav .dropdown a, header nav a:nth-child(4){
   border-right: none;
 }
 header a:hover{
@@ -97,6 +97,40 @@ header a, header img{
   flex: 1;
   text-align: center;
 }
+
+/* DROPDOWN DE PRODUCTOS */
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 5;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #684f40;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: white;
+  font-size: 1.2rem;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
 /********* MAIN SLIDER **********/
 #carousel-example-2 img{
   max-height: 80vh;
@@ -197,7 +231,7 @@ header a, header img{
   width: 20rem;
   border-top: 2px solid;
 }
-.destacados button, .conoce button{
+.main-btn{
   text-transform: uppercase;
   color: #684f40;
   font-family: 'Montserrat', sans-serif;
@@ -208,7 +242,7 @@ header a, header img{
   font-size: 1.5rem;
   transition: all .5s ease-in-out;
 }
-.destacados button:hover, .conoce button:hover{
+.main-btn:hover{
   background-color: #684f40;
   color: white;
 }
@@ -422,4 +456,63 @@ header a, header img{
 .contenedor-nosotros .contenedor-texto-nosotros p{
   font-size: 1.7rem;
   line-height: 2;
+}
+/************* CONTACTO **************/
+.contenedor-contacto .contenedor-formulario-contacto{
+  font-size: 1.5rem;
+  margin: 0 5rem;
+}
+.contenedor-contacto span{
+  font-size: 1.5rem;
+}
+.contenedor-contacto .contenedor-formulario-contacto>label{
+ margin-top: 2rem;
+}
+.contenedor-contacto .contenedor-formulario-contacto .contenedor-nombre-contacto{
+  margin-top: 2rem;
+}
+.contenedor-contacto .contenedor-formulario-contacto .contenedor-nombre-contacto input{
+  width: 100%;
+}
+@media (min-width:768px){
+  .contenedor-contacto .contenedor-formulario-contacto .contenedor-nombre-contacto input{
+  flex: 1;
+  margin: 0 2rem;
+}
+}
+.contenedor-contacto input, .contenedor-contacto textarea{
+  padding: 1rem;
+  border: 1px solid #888888;
+  color: #684f40;
+  transition: all .5s ease-in-out;
+}
+.contenedor-contacto input:hover, .contenedor-contacto textarea:hover{
+  border: 1px solid #d69c1f;
+}
+
+/************* CARRITO **************/
+.carrito-container p, .carrito-container a{
+  font-size: 1.2rem;
+}
+.carrito-container tr th, .carrito-container tr td{
+  font-size: 1rem;
+}
+.carrito-container .main-btn{
+  font-size: 1rem;
+  padding: 1rem;
+}
+@media (min-width:768px){
+  .carrito-container p, .carrito-container a{
+    font-size: 2rem;
+  }
+  .carrito-container tr th, .carrito-container tr td{
+    font-size: 1.5rem;
+  }
+  .carrito-container .main-btn{
+    font-size: 1.5rem;
+  }
+}
+
+.carrito-container .contenedor-totales{
+  font-size: 1.3rem;
 }

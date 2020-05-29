@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\productosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +26,10 @@ Route::get('redes', function () {
 Route::get('empresa', function () {
     return view('front.empresa');
 });
+
+Route::resource('productos', 'productosController');
+Route::resource('categorias', 'categoriasController');
+Route::resource('carrito', 'carritosController');
 
 Auth::routes();
 

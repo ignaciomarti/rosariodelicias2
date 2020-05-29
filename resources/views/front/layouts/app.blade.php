@@ -28,7 +28,17 @@
         <nav class="d-none d-md-flex align-items-center container">
           <a href="empresa" class="px-3 py-3">Empresa</a>
           <a href="productos" class="px-3 py-3">Productos</a>
-          <a href="categorias" class="px-3 py-3">Categorías</a>
+
+          <div class="dropdown px-3 py-3">
+            <a href="categorias" class="dropbtn px-3 py-3">Categorías</a>
+            <div class="dropdown-content">
+              <a href="#">Categoría 1</a>
+              <a href="#">Categoría 2</a>
+              <a href="#">Categoría 3</a>
+            </div>
+          </div> 
+
+          
           <a href="/"><img src="img/logo.jpg" class="logo" alt="logo de Rosario Delicias"></a>
           <a href="redes" class="px-3 py-3">Redes</a>
           <a href="contacto" class="px-3 py-3">Contacto</a>

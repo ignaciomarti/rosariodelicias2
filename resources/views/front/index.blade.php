@@ -124,7 +124,7 @@
       </div>
     </div>
   </div>
-  <button class="mx-auto d-block mt-5">Ver todos los productos</button>
+  <button class="main-btn mx-auto d-block mt-5">Ver todos los productos</button>
 </section>
 
 <section class="testimoniales d-md-flex justify-content-between align-items-center my-5">
@@ -163,7 +163,7 @@
   <div class="contenedor-conoce">
     <h2 class="text-center">Conocé nuestros clásicos</h2>
     <p class="text-center container">Alfajores, tartas, Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, dolore.</p>
-    <button class="mx-auto d-block mt-5">Ver todos los productos</button>
+    <button class="main-btn mx-auto d-block mt-5">Ver todos los productos</button>
   </div>
 </section>
 
