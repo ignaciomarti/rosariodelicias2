@@ -66,7 +66,7 @@
 
 <section class="container destacados">
   <h4 class="text-center mt-5 mb-2">Nuestros destacados</h4>
-  <hr>
+  <hr class="separador">
   <p class="text-center my-4"> Amamos lo que hacemos</p>
   <div class="row row-cols-1 row-cols-md-3">
     <div class="col mb-5">
@@ -134,26 +134,26 @@
 
 <section class="diferencia">
   <h4 class="text-center mt-5 mb-2">Lo que nos diferencia</h4>
-  <hr>
+  <hr class="separador">
   <p class="text-center my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit?</p>
 
   <div class="container contenedor-cards-diferencia">
     <div class="contenedor-card-diferencia">
       <i class="fas fa-mug-hot"></i>
       <h4 class="mt-4">Lorem ipsum</h4>
-      <hr>
+      <hr class="separador">
       <span>Lorem ipsum dolor sit amet consectetur.</span>
     </div>
     <div class="contenedor-card-diferencia">
       <i class="fas fa-cookie-bite"></i>
       <h4 class="mt-4">Lorem ipsum</h4>
-      <hr>
+      <hr class="separador">
       <span>Lorem ipsum dolor sit amet consectetur.</span>
     </div>
     <div class="contenedor-card-diferencia">    
       <i class="far fa-heart"></i>
       <h4 class="mt-4">Lorem ipsum</h4>
-      <hr>
+      <hr class="separador">
       <span>Lorem ipsum dolor sit amet consectetur.</span>
     </div>
   </div>
@@ -169,7 +169,7 @@
 
 <section class="location">
   <h4 class="text-center mt-5 mb-2">Dónde estamos</h4>
-  <hr>
+  <hr class="separador">
   <p class="text-center my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit?</p>
   <div class="contenedor-mapa">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d481728.80462972773!2d-99.42381643176068!3d19.390519022922902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee841!2zQ2l1ZGFkIGRlIE3DqXhpY28sIENETVgsIE3DqXhpY28!5e0!3m2!1ses-419!2sar!4v1590498688346!5m2!1ses-419!2sar" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
