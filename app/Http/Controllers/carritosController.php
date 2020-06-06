@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\pageAdministration;
 use Illuminate\Http\Request;
 
 class carritosController extends Controller
@@ -13,7 +13,9 @@ class carritosController extends Controller
      */
     public function index()
     {
-        return view('front.carritos.index');
+        $collection = pageAdministration::all();
+        $datos = $collection[0];
+        return view('front.carritos.index', compact('datos'));
     }
 
     /**

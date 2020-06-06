@@ -15,7 +15,7 @@
     <div class="carousel-inner" role="listbox">
       <div class="carousel-item active">
         <div class="view">
-          <img class="d-block w-100" src="img/foto-welcome1.jpg"
+          <img class="d-block w-100" src="/storage/img-front/{{$datos->foto_slider_1}}"
             alt="First slide">
             <div class="contenedor-titulos">
             <h1 class="welcomeTitle">{{$datos->main_title_1 ? $datos->main_title_1 : ""}}</h1>
@@ -27,7 +27,7 @@
       <div class="carousel-item">
         <!--Mask color-->
         <div class="view">
-          <img class="d-block w-100" src="img/foto-welcome2.jpg"
+          <img class="d-block w-100" src="/storage/img-front/{{$datos->foto_slider_2}}"
             alt="Second slide">
             <div class="contenedor-titulos">
               <h1>{{$datos->main_title_2 ? $datos->main_title_2 : ""}}</h1>
@@ -39,7 +39,7 @@
       <div class="carousel-item">
         <!--Mask color-->
         <div class="view">
-          <img class="d-block w-100" src="img/foto-welcome3.jpg"
+          <img class="d-block w-100" src="/storage/img-front/{{$datos->foto_slider_3}}"
             alt="Third slide">
             <div class="contenedor-titulos">
               <h1>{{$datos->main_title_3 ? $datos->main_title_3 : ""}}</h1>
@@ -128,7 +128,7 @@
 </section>
 
 <section class="testimoniales d-md-flex justify-content-between align-items-center my-5">
-  <img src="img/panadero.jpg" alt="imágen de Florian Martí">
+  <img src="/storage/img-front/{{$datos->foto_testimonial}}" alt="imágen de Florian Martí">
   <blockquote>{{$datos->testimonial ? $datos->testimonial : ""}}</blockquote>
 </section>
 
@@ -140,21 +140,21 @@
   <div class="container contenedor-cards-diferencia">
     <div class="contenedor-card-diferencia">
       <i class="fas fa-mug-hot"></i>
-      <h4 class="mt-4">{{$datos->title_first_card_diferencia ? $datos->title_first_card_diferencia : ""}}</h4>
+      <h4 class="mt-4 text-center">{{$datos->title_first_card_diferencia ? $datos->title_first_card_diferencia : ""}}</h4>
       <hr class="separador">
-      <span>{{$datos->subtitle_first_card_diferencia ? $datos->subtitle_first_card_diferencia : ""}}</span>
+      <span class="text-center">{{$datos->subtitle_first_card_diferencia ? $datos->subtitle_first_card_diferencia : ""}}</span>
     </div>
     <div class="contenedor-card-diferencia">
       <i class="fas fa-cookie-bite"></i>
-      <h4 class="mt-4">{{$datos->title_second_card_diferencia ? $datos->title_second_card_diferencia : ""}}</h4>
+      <h4 class="mt-4 text-center">{{$datos->title_second_card_diferencia ? $datos->title_second_card_diferencia : ""}}</h4>
       <hr class="separador">
-      <span>{{$datos->subtitle_second_card_diferencia ? $datos->subtitle_second_card_diferencia : ""}}</span>
+      <span class="text-center">{{$datos->subtitle_second_card_diferencia ? $datos->subtitle_second_card_diferencia : ""}}</span>
     </div>
     <div class="contenedor-card-diferencia">    
       <i class="far fa-heart"></i>
-      <h4 class="mt-4">{{$datos->title_third_card_diferencia ? $datos->title_third_card_diferencia : ""}}</h4>
+      <h4 class="mt-4 text-center">{{$datos->title_third_card_diferencia ? $datos->title_third_card_diferencia : ""}}</h4>
       <hr class="separador">
-      <span>{{$datos->subtitle_third_card_diferencia ? $datos->subtitle_third_card_diferencia : ""}}</span>
+      <span class="text-center">{{$datos->subtitle_third_card_diferencia ? $datos->subtitle_third_card_diferencia : ""}}</span>
     </div>
   </div>
 </section>

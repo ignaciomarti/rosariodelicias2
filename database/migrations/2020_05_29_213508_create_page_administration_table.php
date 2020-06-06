@@ -44,6 +44,36 @@ class CreatePageAdministrationTable extends Migration
             $table->text('title_section_location')->nullable();
             $table->text('subtitle_section_location')->nullable();
             $table->text('formulario_contacto')->nullable();
+
+
+            $table->text('title_nosotros')->nullable();
+            $table->text('first_subtitle_nosotros')->nullable();
+            $table->text('first_foto_nosotros')->nullable();
+            $table->text('first_subtitle_first_text_nosotros')->nullable();
+            $table->text('first_subtitle_second_text_nosotros')->nullable();
+            $table->text('second_subtitle_nosotros')->nullable();
+            $table->text('second_foto_nosotros')->nullable();
+            $table->text('second_subtitle_first_text_nosotros')->nullable();
+            $table->text('second_subtitle_second_text_nosotros')->nullable();
+            $table->text('footer_paragraph_nosotros')->nullable();
+
+
+            $table->text('cart_title')->nullable();
+            $table->text('cart_subtitle')->nullable();
+            $table->text('first_ask')->nullable();
+            $table->text('first_answer')->nullable();
+            $table->text('second_ask')->nullable();
+            $table->text('second_answer')->nullable();
+            $table->text('third_ask')->nullable();
+            $table->text('third_answer')->nullable();
+            $table->text('fourth_ask')->nullable();
+            $table->text('fourth_answer')->nullable();
+            $table->text('fifth_ask')->nullable();
+            $table->text('fifth_answer')->nullable();
+            $table->text('sixth_ask')->nullable();
+            $table->text('sixth_answer')->nullable();
+            $table->text('seventh_ask')->nullable();
+            $table->text('seventh_answer')->nullable();
         });
     }
 

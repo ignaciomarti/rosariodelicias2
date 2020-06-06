@@ -3,9 +3,9 @@
 
 <div class="container carrito-container mt-3">
 
-        <h2 class="d-block text-center main-color">Carrito</h2>
+        <h2 class="d-block text-center main-color">{{$datos->cart_title?$datos->cart_title:""}}</h2>
 
-    <p class="text-center">Hacé tu pedido y recibilo en la puerta de tu casa!</p>
+        <p class="text-center">{{$datos->cart_subtitle?$datos->cart_subtitle:""}}</p>
 
     <div class="row panel-agregarNuevo justify-content-center my-3">
         <a class="main-btn btn my-3" href="{{route('productos.index')}}">Seguir comprando</a>
@@ -58,28 +58,38 @@
         <h2 class="main-color text-center my-4">Preguntas frecuentes</h2>
 
         <div class="contenedor-pregunta">
-            <h4 class="main-color">¿Puedo freezar productos?</h4>
-            <p>¡Si! Todos nuestros productos pueden freezarse tranquilamente, y descongelarse a temperatura ambiente o como más te gusten ¡aprovechá y hacé un pedido para toda la semana!</p> 
+            <h4 class="main-color">{{$datos->first_ask?$datos->first_ask:""}}</h4>
+            <p>{{$datos->first_answer?$datos->first_answer:""}}</p> 
         </div>
 
         <div class="contenedor-pregunta">
-            <h4 class="main-color">¿Puedo pedir desde otro barrio?</h4>
-            <p> Lamentablemente no, porque no podemos hacer envíos fuera del radio indicado. Pero aún podés acercarte a nuestros locales ¡consultá horarios actualizados en Instagram!</p>
+            <h4 class="main-color">{{$datos->second_ask?$datos->second_ask:""}}</h4>
+            <p> {{$datos->second_answer?$datos->second_answer:""}}</p>
         </div>
 
         <div class="contenedor-pregunta">
-            <h4 class="main-color">¿En qué horario me lo entregan?</h4>
-            <p> Los pedidos se entregan entre las 10:00 y 15:00 aproximadamente. El orden de entrega depende de los pedidos del día, y no es posible especificar una hora exacta. Considerá que debido a las circunstancias y controles en las calles, a veces pueden haber pequeñas demoras.</p>
+            <h4 class="main-color">{{$datos->third_ask?$datos->third_ask:""}}</h4>
+            <p> {{$datos->third_answer?$datos->third_answer:""}}</p>
         </div>
 
         <div class="contenedor-pregunta">
-            <h4 class="main-color">¿Y si no veo el producto que me gusta en la lista?</h4>
-            <p> Los productos disponibles son sólo los publicados. Como todo lo que enviamos es fresco y del día, seguimos un calendario de producción ¡Chequeá los últimos productos y especiales de la semana en Instagram!</p>
+            <h4 class="main-color">{{$datos->fourth_ask?$datos->fourth_ask:""}}</h4>
+            <p> {{$datos->fourth_answer?$datos->fourth_answer:""}}</p>
         </div>
 
         <div class="contenedor-pregunta">
-            <h4 class="main-color">¿Cuánto sale el envío?</h4>
-            <p> El costo del envío depende de dónde quieras recibir el producto. Luego de realizar tu pedido, te contactaremos informándote el importe final que vas a pagar!</p>
+            <h4 class="main-color">{{$datos->fifth_ask?$datos->fifth_ask:""}}</h4>
+            <p> {{$datos->fifth_answer?$datos->fifth_answer:""}}</p>
+        </div>
+
+        <div class="contenedor-pregunta">
+            <h4 class="main-color">{{$datos->sixth_ask?$datos->sixth_ask:""}}</h4>
+            <p> {{$datos->sixth_answer?$datos->sixth_answer:""}}</p>
+        </div>
+
+        <div class="contenedor-pregunta">
+            <h4 class="main-color">{{$datos->seventh_ask?$datos->seventh_ask:""}}</h4>
+            <p> {{$datos->seventh_answer?$datos->seventh_answer:""}}</p>
         </div>
     </div>
 

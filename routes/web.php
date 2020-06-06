@@ -25,7 +25,9 @@ Route::get('contacto', function () {
 });
 
 Route::get('empresa', function () {
-    return view('front.empresa');
+    $collection = pageAdministration::all();
+    $datos = $collection[0];
+    return view('front.empresa', compact('datos'));
 });
 
 Route::resource('productos', 'productosController');
