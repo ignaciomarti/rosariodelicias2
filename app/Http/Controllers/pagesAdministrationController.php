@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\pageAdministration;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class pagesAdministrationController extends Controller
 {
