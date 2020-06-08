@@ -69,62 +69,23 @@
   <hr class="separador">
   <p class="text-center my-4"> {{$datos->destacados_subtitle ? $datos->destacados_subtitle : ""}}</p>
   <div class="row row-cols-1 row-cols-md-3">
+
+    @forelse ($productosDestacados as $productoDestacado)
     <div class="col mb-5">
       <div class="card">
-        <img src="img/foto-welcome1.jpg" class="card-img-top" alt="Primer producto destacado">
+        <img src="/storage/product_poster/{{$productoDestacado->poster}}" class="card-img-top" alt="Primer producto destacado">
         <div class="contenedor-descripcion-destacados">
-          <p class="text-center">Producto 1</p>
-          <span class="text-center d-block">Alfajores</span>
+          <p class="text-center">{{$productoDestacado->titulo}}</p>
+          <span class="text-center d-block">{{$productoDestacado->categoria->nombre_categoria}}</span>
         </div>
       </div>
-    </div>
-    <div class="col mb-5">
-      <div class="card">
-        <img src="img/foto-welcome2.jpg" class="card-img-top" alt="Segundo producto destacado">
-        <div class="contenedor-descripcion-destacados">
-          <p class="text-center">Producto 2</p>
-          <span class="text-center d-block">Alfajores</span>
-        </div>
-      </div>
-    </div>
-    <div class="col mb-5">
-      <div class="card">
-        <img src="img/foto-welcome3.jpg" class="card-img-top" alt="Tercer producto destacado">
-        <div class="contenedor-descripcion-destacados">
-          <p class="text-center">Producto 3</p>
-          <span class="text-center d-block">Alfajores</span>
-        </div>
-      </div>
-    </div>
-    <div class="col mb-5 mb-sm-0">
-      <div class="card">
-        <img src="img/foto-welcome3.jpg" class="card-img-top" alt="Cuarto producto destacado">
-        <div class="contenedor-descripcion-destacados">
-          <p class="text-center">Producto 4</p>
-          <span class="text-center d-block">Alfajores</span>
-        </div>
-      </div>
-    </div>
-    <div class="col mb-5 mb-sm-0">
-      <div class="card">
-        <img src="img/foto-welcome2.jpg" class="card-img-top" alt="Quinto producto destacado">
-        <div class="contenedor-descripcion-destacados">
-          <p class="text-center">Producto 5</p>
-          <span class="text-center d-block">Alfajores</span>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card">
-        <img src="img/foto-welcome1.jpg" class="card-img-top" alt="Sexto producto destacado">
-        <div class="contenedor-descripcion-destacados">
-          <p class="text-center">Producto 6</p>
-          <span class="text-center d-block">Alfajores</span>
-        </div>
-      </div>
-    </div>
+    </div> 
+    @empty
+        No se encontraron productos destacados
+    @endforelse
+
   </div>
-  <button class="main-btn mx-auto d-block mt-5">Ver todos los productos</button>
+  <a href="productos"><button class="main-btn mx-auto d-block mt-5">Ver todos los productos</button></a>
 </section>
 
 <section class="testimoniales d-md-flex justify-content-between align-items-center my-5">

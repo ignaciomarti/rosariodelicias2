@@ -4,6 +4,7 @@ use App\Http\Controllers\productosController;
 use App\pageAdministration;
 use Illuminate\Support\Facades\Route;
 use App\Categoria;
+use App\Producto;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,14 +15,11 @@ use App\Categoria;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('include', function(){
-    $categorias = Categoria::all();
-    return view('front.layouts.app', compact('categorias'));
-});
 Route::get('/', function () {
     $collection = pageAdministration::all();
     $datos = $collection[0];
-    return view('front.index', compact('datos'));
+    $productosDestacados = Producto::where('es_destacado', 1)->get();
+    return view('front.index', compact('datos', 'productosDestacados'));
 });
 Route::get('contacto', function () {
     return view('front.contacto');

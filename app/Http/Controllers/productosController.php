@@ -45,7 +45,6 @@ class productosController extends Controller
             'es_destacado' => ['required', 'numeric', 'min:0', 'max:1'],
             'precio' => ['required', 'numeric', 'min:0'],
             'descuento' => ["nullable", "numeric","min:0","max:100"],
-            'stock' => ['required', 'numeric', 'min:0'],
             'poster' => ['required', 'mimes:jpeg,bmp,png,jpg'],
             'poster2' => ['nullable', 'mimes:jpeg,bmp,png,jpg'],
             'poster3' => ['nullable', 'mimes:jpeg,bmp,png,jpg'],
