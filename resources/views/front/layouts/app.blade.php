@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Rosario Delicias') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -32,9 +32,10 @@
           <div class="dropdown px-3 py-3">
             <a href="categorias" class="dropbtn px-3 py-3">Categorías</a>
             <div class="dropdown-content">
-              <a href="#">Categoría 1</a>
-              <a href="#">Categoría 2</a>
-              <a href="#">Categoría 3</a>
+              <a href="#">Ver todas</a>
+              @foreach ($categorias as $categoria)
+                <a href="#">{{$categoria->nombre_categoria}}</a>   
+              @endforeach
             </div>
           </div> 
 

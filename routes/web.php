@@ -3,7 +3,7 @@
 use App\Http\Controllers\productosController;
 use App\pageAdministration;
 use Illuminate\Support\Facades\Route;
-
+use App\Categoria;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +14,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('include', function(){
+    $categorias = Categoria::all();
+    return view('front.layouts.app', compact('categorias'));
+});
 Route::get('/', function () {
     $collection = pageAdministration::all();
     $datos = $collection[0];

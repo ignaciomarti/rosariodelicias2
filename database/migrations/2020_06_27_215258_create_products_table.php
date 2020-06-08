@@ -19,6 +19,15 @@ class CreateProductsTable extends Migration
             $table->string('titulo');
             $table->float('precio');
             $table->string('descripcion');
+            $table->bigInteger("categoria_id")->unsigned()->default("1");
+            $table->foreign("categoria_id")->references("id")->on("categorias");
+            $table->smallInteger('descuento')->nullable();
+            $table->tinyInteger('es_destacado')->default(0);
+            $table->string('poster');
+            $table->string('poster2')->nullable();
+            $table->string('poster3')->nullable();
+            $table->string('poster4')->nullable();
+            $table->string('poster5')->nullable();
         });
     }
 
