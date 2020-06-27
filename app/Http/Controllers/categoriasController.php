@@ -66,7 +66,8 @@ class categoriasController extends Controller
     public function show($id)
     {
         $categoria = Categoria::find($id);
-        return view('front.categorias.index', compact("categoria"));
+        $otras_categorias = Categoria::all();
+        return view('front.categorias.categoria', compact("categoria", "otras_categorias"));
     }
 
     /**

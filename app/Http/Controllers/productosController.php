@@ -15,8 +15,13 @@ class productosController extends Controller
      */
     public function index()
     {
-        $productos = Producto::all();
-        return view('admin.productos.index', compact('productos'));
+        if (Auth::user() && Auth::user()->tipo_de_usuario = 2) {
+            $productos = Producto::all();
+            return view('admin.productos.index', compact('productos'));
+        } else {
+            $productos = Producto::paginate(9);
+            return view('front.productos.index', compact('productos'));
+        }
     }
 
     /**
@@ -111,7 +116,7 @@ class productosController extends Controller
         if (Auth::user()!= null && Auth::user()->tipo_de_usuario === 2) {
             return view("admin.productos.show", $vac);
         } else {
-            return view("front.productos.index", $vac);
+            return view("front.productos.producto", $vac);
         }
     }
 
@@ -234,4 +239,5 @@ class productosController extends Controller
         return redirect()->route('productos.index')->with("status", "El producto ha sido eliminado.");
 
     }
+    
 }

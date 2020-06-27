@@ -21,9 +21,6 @@ Route::get('/', function () {
     $productosDestacados = Producto::where('es_destacado', 1)->get();
     return view('front.index', compact('datos', 'productosDestacados'));
 });
-Route::get('contacto', function () {
-    return view('front.contacto');
-});
 
 Route::get('empresa', function () {
     $collection = pageAdministration::all();
@@ -34,7 +31,10 @@ Route::get('empresa', function () {
 Route::resource('productos', 'productosController');
 Route::resource('categorias', 'categoriasController');
 Route::resource('carrito', 'carritosController');
-Route::resource('administration', 'pagesAdministrationController');
+Route::resource('administration', 'pagesAdministrationController')->middleware('administrador');
+Route::resource('contactos', 'ContactosController');
+
+Route::POST('contacto', 'ContactosController@insert')->name("contactos.insert");
 
 Auth::routes();
 

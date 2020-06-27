@@ -1,4 +1,4 @@
-@extends('front.layouts.app')
+{{-- @extends('front.layouts.app')
 @section('content')
 
 <div class="container carrito-container mt-3">
@@ -96,4 +96,6 @@
 </main>
 
 
-@endsection
+@endsection --}}
+
+<img src="/storage/site-under-construction.jpg" width="100%" height="100%" alt="Sitio en construcción">

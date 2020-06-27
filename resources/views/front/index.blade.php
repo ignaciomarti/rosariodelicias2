@@ -71,17 +71,19 @@
   <div class="row row-cols-1 row-cols-md-3">
 
     @forelse ($productosDestacados as $productoDestacado)
-    <div class="col mb-5">
-      <div class="card">
-        <img src="/storage/product_poster/{{$productoDestacado->poster}}" class="card-img-top" alt="Primer producto destacado">
-        <div class="contenedor-descripcion-destacados">
-          <p class="text-center">{{$productoDestacado->titulo}}</p>
-          <span class="text-center d-block">{{$productoDestacado->categoria->nombre_categoria}}</span>
+    <a href="{{Route('productos.show', $productoDestacado->id)}}">
+      <div class="col mb-5">
+        <div class="card">
+          <img src="/storage/product_poster/{{$productoDestacado->poster}}" class="card-img-top" alt="Primer producto destacado">
+          <div class="contenedor-descripcion-destacados">
+            <p class="text-center">{{$productoDestacado->titulo}}</p>
+            <span class="text-center d-block">{{$productoDestacado->categoria->nombre_categoria}}</span>
+          </div>
         </div>
-      </div>
-    </div> 
+      </div> 
+    </a>
     @empty
-        No se encontraron productos destacados
+        <p class="text-center">No se encontraron productos destacados</p> 
     @endforelse
 
   </div>

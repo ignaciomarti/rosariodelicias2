@@ -1,7 +1,8 @@
 @extends('front.layouts.app')
 @section('content')
 <div class="contenedor-contacto container">
-    <form action="/" method="POST">
+    <form action="{{route('contactos.insert')}}" method="POST">
+        @csrf
           <h4 class="main-color d-block text-center my-4">CONTACTANOS</h4>
           <span class="main-color d-block text-center">Envianos tu consulta y te responderemos a la brevedad</span>
           <div class="contenedor-formulario-contacto d-flex flex-column align-items-initial justify-content-between">
