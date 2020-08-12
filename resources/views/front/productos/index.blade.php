@@ -14,8 +14,9 @@
           <div class="contenedor-descripcion-destacados">
             <p class="text-center">{{$producto->titulo}}</p>
             <span class="text-center d-block">{{$producto->categoria->nombre_categoria}}</span>
-          </div></a>
+          </div>
         </div>
+        </a>
       </div> 
       @empty
           <p class="text-center">No hay productos cargados. Por favor, intente nuevamente más tarde.</p>
