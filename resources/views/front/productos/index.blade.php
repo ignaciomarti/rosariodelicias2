@@ -10,7 +10,7 @@
       <div class="col mb-5">
         <a href="{{route('productos.show', $producto->id)}}">
         <div class="card">
-          <img src="/storage/product_poster/{{$producto->poster}}" class="card-img-top" alt="Primer producto destacado">
+          <img src="/storage/product_poster/{{$producto->poster}}" class="card-img-top" alt="{{$producto->titulo}}">
           <div class="contenedor-descripcion-destacados">
             <p class="text-center">{{$producto->titulo}}</p>
             <span class="text-center d-block">{{$producto->categoria->nombre_categoria}}</span>
