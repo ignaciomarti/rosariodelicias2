@@ -19,13 +19,35 @@
             <div class="row">
 
                 <div class="col-lg-3 order-1 order-md-1">
-                    <h2 class="mb-4 producto-titulo p-2 main-color text-center">Productos similares</h2>
-                    <div class="list-group lista-producto">
-                        @forelse ($producto->categoria->productos as $productos)
+                    <div class="container-descripcion-producto">
+                        <h2 class="mb-4 producto-titulo p-2 main-color text-center">Datos del Producto</h2>
+                        <div class="list-group lista-descripcion-producto">
+                        <span>Categoría: {{$producto->categoria->nombre_categoria}}</span>
+                        <p>Precio unitario: $<span class="{{$producto->descuento?'old_price':''}}">{{$producto->precio}}</span> {!! $producto->descuento?"<span class='new_price'>". ($producto->precio-($producto->precio * $producto->descuento/100)) ."</span>":'' !!}</p>
+                        @if ($producto->price_per_three)
+                            <p>Precio por tres unidades: $<span class="{{$producto->descuento?'old_price':''}}">>{{$producto->price_per_three}}</span> {!! $producto->descuento?"<span class='new_price'>". ($producto->price_per_three-($producto->price_per_three * $producto->descuento/100)) ."</span>":'' !!}</p>
+                        @endif
+                        @if ($producto->price_per_six)
+                            <p>Precio por seis unidades: $<span class="{{$producto->descuento?'old_price':''}}">>{{$producto->price_per_six}}</span> {!! $producto->descuento?"<span class='new_price'>". ($producto->price_per_six-($producto->price_per_six * $producto->descuento/100)) ."</span>":'' !!}</p>
+                        @endif
+                        @if ($producto->price_per_twelve)
+                            <p>Precio por doce unidades: $<span class="{{$producto->descuento?'old_price':''}}">>{{$producto->price_per_twelve}}</span> {!! $producto->descuento?"<span class='new_price'>". ($producto->price_per_twelve-($producto->price_per_twelve * $producto->descuento/100)) ."</span>":'' !!}</p>
+                        @endif
+                        @if ($producto->price_per_twentyfour)
+                            <p>Precio por veinticuatro unidades: $<span class="{{$producto->descuento?'old_price':''}}">>{{$producto->price_per_twentyfour}}</span> {!! $producto->descuento?"<span class='new_price'>". ($producto->price_per_twentyfour-($producto->price_per_twentyfour * $producto->descuento/100)) ."</span>":'' !!}</p>
+                        @endif
+                        </div>
+                    </div>
+
+                    <div class="container-productos-similares">
+                        <h2 class="mb-4 producto-titulo p-2 main-color text-center">Productos similares</h2>
+                        <div class="list-group lista-producto">
+                            @forelse ($producto->categoria->productos as $productos)
                             <a href="/producto/{{$productos->id}}" class="list-group-item">{{$productos->titulo}}</a>
-                        @empty
+                            @empty
                             No hay productos similares
-                        @endforelse
+                            @endforelse
+                        </div>
                     </div>
                 </div>
                 <!-- /.col-lg-3 -->

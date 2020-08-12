@@ -194,10 +194,12 @@ header a, header img{
 .destacados .card, .card_container{
   border: 2px solid #696969;
   position: relative;
+  height: 40vh;
 }
 .destacados .card img, .card_container img{
   transition: all .5s ease-in-out;
   padding: 8px;
+  height: 100%;
 }
 .destacados .card:hover img, .card_container:hover img{
   opacity: 50%;
@@ -524,4 +526,33 @@ header a, header img{
 }
 
 
+/***************PRODUCTOS******************/
+.lista-descripcion-producto *{
+  font-size: 1.6rem;
+}
+.old_price{
+  position: relative;
+}
+
+.old_price:before{
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 2px solid;
+  border-color: red;
+   
+  -webkit-transform:rotate(-10deg);
+  -moz-transform:rotate(-10deg);
+  -ms-transform:rotate(-10deg);
+  -o-transform:rotate(-10deg);
+  transform:rotate(-10deg);
+  
+}
+
+.new_price{
+  color: green;
+  font-size: 2rem;
+}
 /***************ADMINISTRACION******************/

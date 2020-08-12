@@ -45,7 +45,19 @@
 
                         <p><strong>Descripción: </strong>{{$producto->descripcion}}</p>
 
-                        <p><strong>Precio: </strong>${{$producto->precio}}</p>
+                        <p><strong>Precio Unitario: </strong>${{$producto->precio}}</p>
+                        @if ($producto->price_per_three)
+                            <p><strong>Precio por tres unidades: </strong>${{$producto->price_per_three}}</p>
+                        @endif
+                        @if ($producto->price_per_six)
+                            <p><strong>Precio por seis unidades: </strong>${{$producto->price_per_six}}</p>
+                        @endif
+                        @if ($producto->price_per_twelve)
+                            <p><strong>Precio por doce unidades: </strong>${{$producto->price_per_twelve}}</p>
+                        @endif
+                        @if ($producto->price_per_twentyfour)
+                            <p><strong>Precio por veinticuatro unidades: </strong>${{$producto->price_per_twentyfour}}</p>
+                        @endif
 
                         <p><strong>Descuento: </strong> @if (isset($producto->descuento)) {{$producto->descuento}} @else "Este producto no está en promoción" @endif</p>
 

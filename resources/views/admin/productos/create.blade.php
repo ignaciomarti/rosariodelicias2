@@ -69,7 +69,58 @@
                             </div>
                         </div>
 
-                        
+                        <div class="form-group row">
+                            <label for="price_per_three" class="col-md-4 col-form-label text-md-right">{{ __('Precio unitario por tres unidades') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="price_per_three" type="number" class="form-control @error('price_per_three') is-invalid @enderror" name="price_per_three" value="{{ old('price_per_three') }}" autocomplete="price_per_three" autofocus>
+                                @error('price_per_three')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="price_per_six" class="col-md-4 col-form-label text-md-right">{{ __('Precio unitario por seis unidades') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="price_per_six" type="number" class="form-control @error('price_per_six') is-invalid @enderror" name="price_per_six" value="{{ old('price_per_six') }}" autocomplete="price_per_six" autofocus>
+                                @error('price_per_six')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="price_per_twelve" class="col-md-4 col-form-label text-md-right">{{ __('Precio unitario por doce unidades') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="price_per_twelve" type="number" class="form-control @error('price_per_twelve') is-invalid @enderror" name="price_per_twelve" value="{{ old('price_per_twelve') }}" autocomplete="price_per_twelve" autofocus>
+                                @error('price_per_twelve')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="price_per_twentyfour" class="col-md-4 col-form-label text-md-right">{{ __('Precio unitario por veinticuatro unidades') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="price_per_twentyfour" type="number" class="form-control @error('price_per_twentyfour') is-invalid @enderror" name="price_per_twentyfour" value="{{ old('price_per_twentyfour') }}" autocomplete="price_per_twentyfour" autofocus>
+                                @error('price_per_twentyfour')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+         
                         <div class="form-group row">
                             <label for="descuento" class="col-md-4 col-form-label text-md-right">{{ __('Descuento') }}</label>
                             

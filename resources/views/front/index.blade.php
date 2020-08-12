@@ -74,7 +74,7 @@
     <a href="{{Route('productos.show', $productoDestacado->id)}}">
       <div class="col mb-5">
         <div class="card">
-          <img src="/storage/product_poster/{{$productoDestacado->poster}}" class="card-img-top" alt="Primer producto destacado">
+        <img src="/storage/product_poster/{{$productoDestacado->poster}}" class="card-img-top" alt="{{$productoDestacado->titulo}}">
           <div class="contenedor-descripcion-destacados">
             <p class="text-center">{{$productoDestacado->titulo}}</p>
             <span class="text-center d-block">{{$productoDestacado->categoria->nombre_categoria}}</span>
@@ -136,7 +136,7 @@
   <p class="text-center my-4">{{$datos->subtitle_section_location ? $datos->subtitle_section_location : ""}}</p>
   <div class="contenedor-mapa">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d481728.80462972773!2d-99.42381643176068!3d19.390519022922902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee841!2zQ2l1ZGFkIGRlIE3DqXhpY28sIENETVgsIE3DqXhpY28!5e0!3m2!1ses-419!2sar!4v1590498688346!5m2!1ses-419!2sar" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    <form action="/" method="POST">
+    <form action="{{route('contactos.insert')}}" method="POST">
       <div class="contenedor-formulario mb-auto d-md-flex d-none">
         <h4>CONTACTANOS</h4>
         <span>{{$datos->formulario_contacto ? $datos->formulario_contacto : ""}}</span>

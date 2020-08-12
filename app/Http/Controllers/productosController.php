@@ -49,6 +49,10 @@ class productosController extends Controller
             'categoria_id' => ['required', 'numeric', 'min:1'],
             'es_destacado' => ['required', 'numeric', 'min:0', 'max:1'],
             'precio' => ['required', 'numeric', 'min:0'],
+            'price_per_three' => ['nullable', 'numeric', 'min:0'],
+            'price_per_six' => ['nullable', 'numeric', 'min:0'],
+            'price_per_twelve' => ['nullable', 'numeric', 'min:0'],
+            'price_per_twentyfour' => ['nullable', 'numeric', 'min:0'],
             'descuento' => ["nullable", "numeric","min:0","max:100"],
             'poster' => ['required', 'mimes:jpeg,bmp,png,jpg'],
             'poster2' => ['nullable', 'mimes:jpeg,bmp,png,jpg'],
@@ -56,46 +60,50 @@ class productosController extends Controller
             'poster4' => ['nullable', 'mimes:jpeg,bmp,png,jpg'],
             'poster5' => ['nullable', 'mimes:jpeg,bmp,png,jpg']
         ]);
+        $productoACrear = [];
 
-        $productoACrear = [
-            'titulo' => trim($request['titulo']),
-            'descripcion' => trim($request['descripcion']),
-            'categoria_id' => $request['categoria_id'],
-            'es_destacado' => $request['es_destacado'],
-            'precio' => trim($request['precio']),
-            'descuento' => $request['descuento'],
-        ];
+        $productoACrear['titulo'] = $request->titulo;
+        $productoACrear['descripcion'] = $request->descripcion;
+        $productoACrear['categoria_id'] = $request->categoria_id;
+        $productoACrear['es_destacado'] = $request->es_destacado;
+        $productoACrear['precio'] = $request->precio;
+        $productoACrear['price_per_three'] = $request->price_per_three?$request->price_per_three:null;
+        $productoACrear['price_per_six'] = $request->price_per_six?$request->price_per_six:null;
+        $productoACrear['price_per_twelve'] = $request->price_per_twelve?$request->price_per_twelve:null;
+        $productoACrear['price_per_twentyfour'] = $request->price_per_twentyfour?$request->price_per_twentyfour:null;
+        $productoACrear['descuento'] = $request->descuento;
 
         $nombre_del_archivo_1 = '';
         if(isset($request['poster'])){
-        $ruta = $request->file("poster")->store("public/product_poster");
-        $nombre_del_archivo_1=basename($ruta);
-        $productoACrear["poster"] = $nombre_del_archivo_1;
+            $ruta = $request->file("poster")->store("public/product_poster");
+            $nombre_del_archivo_1=basename($ruta);
+            $productoACrear["poster"] = $nombre_del_archivo_1;
         }
         $nombre_del_archivo_2 = '';
         if(isset($request['poster2'])){
-        $ruta = $request->file("poster2")->store("public/product_poster");
-        $nombre_del_archivo_2=basename($ruta);
-        $productoACrear["poster2"] = $nombre_del_archivo_2;
+            $ruta = $request->file("poster2")->store("public/product_poster");
+            $nombre_del_archivo_2=basename($ruta);
+            $productoACrear["poster2"] = $nombre_del_archivo_2;
         }
         $nombre_del_archivo_3 = '';
         if(isset($request['poster3'])){
-        $ruta = $request->file("poster3")->store("public/product_poster");
-        $nombre_del_archivo_3=basename($ruta);
-        $productoACrear["poster3"] = $nombre_del_archivo_3;
+            $ruta = $request->file("poster3")->store("public/product_poster");
+            $nombre_del_archivo_3=basename($ruta);
+            $productoACrear["poster3"] = $nombre_del_archivo_3;
         }
         $nombre_del_archivo_4 = '';
         if(isset($request['poster4'])){
-        $ruta = $request->file("poster4")->store("public/product_poster");
-        $nombre_del_archivo_4=basename($ruta);
-        $productoACrear["poster4"] = $nombre_del_archivo_4;
+            $ruta = $request->file("poster4")->store("public/product_poster");
+            $nombre_del_archivo_4=basename($ruta);
+            $productoACrear["poster4"] = $nombre_del_archivo_4;
         }
         $nombre_del_archivo_5 = '';
         if(isset($request['poster5'])){
-        $ruta = $request->file("poster5")->store("public/product_poster");
-        $nombre_del_archivo_5=basename($ruta);
-        $productoACrear["poster5"] = $nombre_del_archivo_5;
+            $ruta = $request->file("poster5")->store("public/product_poster");
+            $nombre_del_archivo_5=basename($ruta);
+            $productoACrear["poster5"] = $nombre_del_archivo_5;
         }
+        
         Producto::create($productoACrear);
         return redirect()->route('productos.index')->with("status", "El producto ha sido creado.");
     }
@@ -147,7 +155,21 @@ class productosController extends Controller
     {
         $producto = Producto::find($id);
         $this->validate($request, [
-
+            'titulo' => ['required', 'string', 'max:50'],
+            'descripcion' => ['required', 'string', 'max:255'],
+            'categoria_id' => ['required', 'numeric', 'min:1'],
+            'es_destacado' => ['required', 'numeric', 'min:0', 'max:1'],
+            'precio' => ['required', 'numeric', 'min:0'],
+            'price_per_three' => ['nullable', 'numeric', 'min:0'],
+            'price_per_six' => ['nullable', 'numeric', 'min:0'],
+            'price_per_twelve' => ['nullable', 'numeric', 'min:0'],
+            'price_per_twentyfour' => ['nullable', 'numeric', 'min:0'],
+            'descuento' => ["nullable", "numeric","min:0","max:100"],
+            'poster' => ['nullable', 'mimes:jpeg,bmp,png,jpg'],
+            'poster2' => ['nullable', 'mimes:jpeg,bmp,png,jpg'],
+            'poster3' => ['nullable', 'mimes:jpeg,bmp,png,jpg'],
+            'poster4' => ['nullable', 'mimes:jpeg,bmp,png,jpg'],
+            'poster5' => ['nullable', 'mimes:jpeg,bmp,png,jpg']
         ]);
 
         $producto->titulo = $request->titulo;
@@ -155,6 +177,10 @@ class productosController extends Controller
         $producto->categoria_id = $request->categoria_id;
         $producto->es_destacado = $request->es_destacado;
         $producto->precio = $request->precio;
+        $producto->price_per_three = $request->price_per_three?$request->price_per_three:null;
+        $producto->price_per_six = $request->price_per_six?$request->price_per_six:null;
+        $producto->price_per_twelve = $request->price_per_twelve?$request->price_per_twelve:null;
+        $producto->price_per_twentyfour = $request->price_per_twentyfour?$request->price_per_twentyfour:null;
         $producto->descuento = $request->descuento;
         if($request->poster){
             $nombre_del_archivo_1 = '';
@@ -203,7 +229,7 @@ class productosController extends Controller
         }
 
         $producto->save();
-        return redirect()->route('productos.index')->with('status', 'El producto se ha modificado correctamente');
+        return redirect()->route('productos.show', $producto->id)->with('status', 'El producto se ha modificado correctamente');
     }
 
     /**

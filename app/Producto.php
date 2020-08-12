@@ -7,11 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Producto extends Model
 {
     public $table = 'products';
-    public $guarded = [];
 
     public $fillable = [
         'titulo',
         'precio',
+        'price_per_three',
+        'price_per_six',
+        'price_per_twelve',
+        'price_per_twentyfour',
         'descripcion',
         'descuento',
         'es_destacado',
