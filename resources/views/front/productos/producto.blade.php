@@ -43,7 +43,7 @@
                         <h2 class="mb-4 producto-titulo p-2 main-color text-center">Productos similares</h2>
                         <div class="list-group lista-producto">
                             @forelse ($producto->categoria->productos as $productos)
-                            <a href="/producto/{{$productos->id}}" class="list-group-item">{{$productos->titulo}}</a>
+                            <a href="{{route('productos.show', $productos->id)}}" class="list-group-item">{{$productos->titulo}}</a>
                             @empty
                             No hay productos similares
                             @endforelse
