@@ -141,6 +141,7 @@
         <h4>CONTACTANOS</h4>
         <span>{{$datos->formulario_contacto ? $datos->formulario_contacto : ""}}</span>
         <input type="text" placeholder="Nombre" name="nombre">
+        <input type="text" placeholder="Apellido" name="apellido">
         <input type="text" placeholder="E-mail" name="email">
         <textarea type="text" placeholder="Mensaje..." name="mensaje"></textarea>
         <button type="submit" class="m-0 py-4 px-5">Enviar</button>
