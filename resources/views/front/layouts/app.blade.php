@@ -126,4 +126,6 @@
 
     @include('front.layouts.includes.footer')
 </body>
+
+@yield('push-scripts')
 </html>
