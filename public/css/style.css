@@ -823,13 +823,12 @@ header a, header img{
 }
 
 .icon-cards__item:nth-child(2) {
-  transform: rotateY(90deg) translateZ(35vw);
+  transform: rotateY(120deg) translateZ(35vw);
 }
 
 .icon-cards__item:nth-child(3) {
-  transform: rotateY(180deg) translateZ(35vw);
+  transform: rotateY(240deg) translateZ(35vw);
 }
-
 
 .icon-cards__item img{
   height: 100%;
