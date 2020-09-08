@@ -90,21 +90,14 @@
   <a href="productos"><button class="main-btn mx-auto d-block mt-5">Ver todos los productos</button></a>
 </section>
 
-<section class="testimoniales d-md-flex justify-content-between align-items-center my-5">
-  <figure class="icon-cards mt-3">
+<section class="testimoniales d-md-flex justify-content-center align-items-center my-5">
+  <figure class="icon-cards">
     <div class="icon-cards__content">
-      <div class="icon-cards__item d-flex align-items-center justify-content-center"><span class="h1">🙂</span></div>
-      <div class="icon-cards__item d-flex align-items-center justify-content-center"><span class="h1">😊</span></div>
-      <div class="icon-cards__item d-flex align-items-center justify-content-center"><span class="h1">😀</span></div>
+      <div class="icon-cards__item d-flex align-items-center justify-content-center"><img src="img/1.jpeg" alt="testimonial 1"></div>
+      <div class="icon-cards__item d-flex align-items-center justify-content-center"><img src="img/2.jpeg" alt="testimonial 2"></div>
+      <div class="icon-cards__item d-flex align-items-center justify-content-center"><img src="img/3.jpeg" alt="testimonial 3"></div>
     </div>
-  </figure>
-  
-  <div class="checkbox">
-    <input class="d-none" id="toggle-animation" type="checkbox" checked />
-    <label class="checkbox__checkbox" for="toggle-animation"></label>
-    <label class="checkbox__label" for="toggle-animation">Toggle animation</label>
-  </div>
-  
+  </figure>  
 </section>
 
 <section class="diferencia">
