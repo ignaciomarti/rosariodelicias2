@@ -831,8 +831,15 @@ header a, header img{
 }
 
 .icon-cards__item img{
-  height: 100%;
+  max-width: 100%;
 }
+
+@media (min-width: 568px){
+  .icon-cards__item img{
+    height: 100%;
+  }
+}
+
 @-webkit-keyframes jelly {
   from {
     transform: scale(1, 1);

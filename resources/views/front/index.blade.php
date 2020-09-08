@@ -90,7 +90,7 @@
   <a href="productos"><button class="main-btn mx-auto d-block mt-5">Ver todos los productos</button></a>
 </section>
 
-<section class="testimoniales d-md-flex justify-content-center align-items-center my-5">
+<section class="testimoniales d-flex justify-content-center align-items-center my-5">
   <figure class="icon-cards">
     <div class="icon-cards__content">
       <div class="icon-cards__item d-flex align-items-center justify-content-center"><img src="img/1.jpeg" alt="testimonial 1"></div>
